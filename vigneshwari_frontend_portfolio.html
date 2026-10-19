@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vigneshwari's front-end developer portfolio">
+<title>Vigneshwari | Front-End Developer</title>
+<style>
+:root{--bg:#0b1220;--panel:#111c30;--panel2:#14233b;--text:#eef4ff;--muted:#aab8cf;--blue:#60a5fa;--blue2:#2563eb;--line:#253650;--shadow:0 18px 45px #02061755}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#142b50 0,transparent 32%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1080px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0b1220e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:.3px}.logo span{color:var(--blue)}
+nav{display:flex;align-items:center;gap:24px}nav a{font-size:.92rem;color:var(--muted)}nav a:hover,nav a.active{color:var(--blue)}
+.menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 12px;font-size:1.1rem}
+.hero{padding:88px 0 76px;display:grid;grid-template-columns:1.35fr .8fr;align-items:center;gap:50px;min-height:540px}
+.eyebrow{color:var(--blue);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.7rem,6vw,4.8rem);line-height:1.05;letter-spacing:-2px;margin:16px 0}
+h1 span{color:var(--blue)}.hero p{max-width:620px;color:var(--muted);font-size:1.08rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}.primary{background:var(--blue2);border-color:var(--blue2);color:white}.secondary{background:transparent}
+.hero-card{background:linear-gradient(145deg,#152642,#0e1728);border:1px solid #2b4263;border-radius:28px;padding:28px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.code-top{display:flex;gap:7px;margin-bottom:24px}.dot{width:10px;height:10px;border-radius:50%;background:#f87171}.dot:nth-child(2){background:#fbbf24}.dot:nth-child(3){background:#4ade80}
+.code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.91rem;line-height:2;color:#dbeafe;white-space:pre-wrap;overflow-wrap:anywhere}.pink{color:#f0abfc}.green{color:#86efac}.yellow{color:#fde68a}
+section{padding:76px 0;scroll-margin-top:76px}.section-head{margin-bottom:30px}.section-head .eyebrow{margin-bottom:8px}.section-head h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:0;letter-spacing:-.8px}.section-head p{color:var(--muted);margin:8px 0 0;max-width:680px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel,.skill-card,.project-card,.contact-card{background:linear-gradient(145deg,var(--panel),#0f192a);border:1px solid var(--line);border-radius:20px;padding:24px}
+.panel p{color:var(--muted);margin-top:0}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.fact{background:var(--panel2);border-radius:12px;padding:13px}.fact strong{display:block;color:var(--blue);font-size:.88rem}.fact span{font-size:.9rem;color:var(--muted)}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill-card{padding:20px}.skill-icon{font-size:1.6rem}.skill-card h3{margin:9px 0 4px}.skill-card p{color:var(--muted);font-size:.9rem;margin:0}.level{height:5px;background:#26364f;border-radius:8px;margin-top:16px;overflow:hidden}.level span{display:block;height:100%;background:linear-gradient(90deg,var(--blue2),var(--blue));border-radius:8px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project-card{display:flex;flex-direction:column;min-height:270px}.project-number{font-size:.78rem;color:var(--blue);font-weight:800;letter-spacing:1px}.project-card h3{margin:12px 0 8px}.project-card p{color:var(--muted);font-size:.94rem;margin:0 0 18px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}.tag{font-size:.76rem;padding:5px 9px;background:#1b3151;border:1px solid #29466e;border-radius:20px;color:#cfe3ff}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.contact-card p{color:var(--muted)}.contact-item{padding:12px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.contact-item:last-child{border-bottom:0}.contact-item strong{display:block;color:var(--blue);font-size:.82rem}.contact-form{display:grid;gap:13px}.contact-form label{font-size:.9rem;color:var(--muted)}input,textarea{width:100%;margin-top:6px;padding:12px 13px;background:#0b1424;border:1px solid #2a3c58;border-radius:10px;color:var(--text);font:inherit}input:focus,textarea:focus{outline:2px solid #3b82f688;border-color:var(--blue)}textarea{min-height:120px;resize:vertical}.form-note{font-size:.82rem;color:var(--muted);margin:0}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:65px 0;gap:30px}.hero-card{max-width:560px;transform:none}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.nav{min-height:64px} .menu-btn{display:block}nav{display:none;position:absolute;left:4%;right:4%;top:64px;background:#111c30;border:1px solid var(--line);padding:14px;border-radius:14px;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:11px 8px}.hero{min-height:auto;padding:56px 0}.hero p{font-size:1rem}section{padding:58px 0}.about-grid,.projects-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.panel,.skill-card,.project-card,.contact-card{padding:19px}.facts{grid-template-columns:1fr 1fr}h1{letter-spacing:-1.4px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Vigneshwari<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="container hero" id="home">
+    <div>
+      <div class="eyebrow">MCA Student · Aspiring Front-End Developer</div>
+      <h1>Hi, I'm <span>Vigneshwari.</span></h1>
+      <p>I’m learning to build clean, responsive, and user-friendly websites with HTML, CSS, and JavaScript. I enjoy turning ideas into web pages and improving my skills through practice.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore My Projects ↗</a><a class="btn secondary" href="#contact">Contact Me</a></div>
+    </div>
+    <div class="hero-card" aria-label="Code illustration">
+      <div class="code-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="code"><span class="pink">const</span> developer = {<br>  name: <span class="green">"Vigneshwari"</span>,<br>  role: <span class="green">"Front-End Developer"</span>,<br>  learning: [<span class="yellow">"HTML"</span>, <span class="yellow">"CSS"</span>, <span class="yellow">"JavaScript"</span>],<br>  mindset: <span class="green">"Always learning"</span><br>};</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container reveal">
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2>About Me</h2><p>Curious, consistent, and excited to grow in web development.</p></div>
+      <div class="about-grid">
+        <div class="panel"><p>I am an MCA student working toward an entry-level Front-End Developer role. I have a basic understanding of HTML and CSS, and I’m currently learning JavaScript. I like creating websites and learning how design and code work together.</p><p>My current focus is to practise regularly, build small projects, and strengthen my fundamentals so I can contribute to real-world work in the future.</p></div>
+        <div class="panel"><h3>Quick Profile</h3><div class="facts"><div class="fact"><strong>Education</strong><span>MCA — Pursuing</span></div><div class="fact"><strong>Career Goal</strong><span>Front-End Developer</span></div><div class="fact"><strong>Focus</strong><span>Responsive websites</span></div><div class="fact"><strong>Currently learning</strong><span>JavaScript</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container reveal">
+      <div class="section-head"><div class="eyebrow">What I’m learning</div><h2>Skills</h2><p>My current beginner-level skills and learning areas. I’ll update this section as I gain experience.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="skill-icon">🌐</div><h3>HTML5</h3><p>Basic page structure and semantic elements.</p><div class="level"><span style="width:65%"></span></div></article>
+        <article class="skill-card"><div class="skill-icon">🎨</div><h3>CSS3</h3><p>Basic styling, layouts, and responsive design practice.</p><div class="level"><span style="width:55%"></span></div></article>
+        <article class="skill-card"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Currently learning fundamentals and interactivity.</p><div class="level"><span style="width:25%"></span></div></article>
+        <article class="skill-card"><div class="skill-icon">🧩</div><h3>Problem Solving</h3><p>Building confidence through small practice tasks.</p><div class="level"><span style="width:35%"></span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container reveal">
+      <div class="section-head"><div class="eyebrow">Practice makes progress</div><h2>Projects</h2><p>Example beginner projects to build and publish. Replace these descriptions with your actual work as you complete each one.</p></div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-number">PROJECT 01</div><h3>Personal Portfolio</h3><p>A responsive portfolio to introduce myself, show my skills, and share projects.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+        <article class="project-card"><div class="project-number">PROJECT 02</div><h3>Quiz Website</h3><p>A beginner quiz app with multiple-choice questions, score tracking, and restart functionality.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+        <article class="project-card"><div class="project-number">PROJECT 03</div><h3>Resume Analyzer UI</h3><p>A practice interface for uploading a resume and displaying sample improvement tips. File analysis can be added later.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container reveal">
+      <div class="section-head"><div class="eyebrow">Let’s connect</div><h2>Contact</h2><p>Interested in connecting about entry-level opportunities, projects, or learning web development? Send me a message.</p></div>
+      <div class="contact-grid">
+        <div class="contact-card"><h3>Get in touch</h3><p>You can add your real contact details below before publishing this portfolio.</p><div class="contact-item"><strong>Email</strong><span>your-email@example.com</span></div><div class="contact-item"><strong>LinkedIn</strong><span>linkedin.com/in/your-profile</span></div><div class="contact-item"><strong>Location</strong><span>Tamil Nadu, India</span></div></div>
+        <div class="contact-card">
+          <form class="contact-form" id="contactForm">
+            <label>Your name<input id="senderName" name="name" placeholder="Enter your name" required></label>
+            <label>Your email<input id="senderEmail" name="email" type="email" placeholder="you@example.com" required></label>
+            <label>Message<textarea id="senderMessage" name="message" placeholder="Write your message..." required></textarea></label>
+            <button class="btn primary" type="submit">Prepare Email ↗</button>
+            <p class="form-note" id="formNote">This form opens your email app; it does not send messages directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Vigneshwari · Portfolio</span><a href="#home">Back to top ↑</a></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const sections=[...document.querySelectorAll('main section[id]')];
+const links=[...navLinks.querySelectorAll('a')];
+window.addEventListener('scroll',()=>{let current='home';sections.forEach(section=>{if(window.scrollY>=section.offsetTop-130)current=section.id;});links.forEach(link=>{link.classList.toggle('active',link.getAttribute('href')==='#'+current);});},{passive:true});
+document.getElementById('contactForm').addEventListener('submit',event=>{event.preventDefault();const recipient='your-email@example.com';const name=document.getElementById('senderName').value.trim();const email=document.getElementById('senderEmail').value.trim();const message=document.getElementById('senderMessage').value.trim();if(recipient==='your-email@example.com'){document.getElementById('formNote').textContent='Before using the form, replace your-email@example.com in the JavaScript with your real email address.';return;}const subject=encodeURIComponent('Portfolio message from '+name);const body=encodeURIComponent('From: '+name+' ('+email+')\n\n'+message);window.location.href='mailto:'+recipient+'?subject='+subject+'&body='+body;});
+</script>
+</body>
+</html>
